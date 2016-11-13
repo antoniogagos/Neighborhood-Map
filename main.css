@@ -1,0 +1,70 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  color: white;
+  font-size: 18px;
+  line-height: 2;
+}
+ul {
+  margin-right: 20px;
+}
+#map {
+  order: 2;
+  flex-grow: 14;
+  height: 100%;
+}
+
+#pano {
+  height: 200px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.sideMenu {
+  order: 1;
+  flex-grow: 1;
+  background-color: #212121;
+}
+
+.listLocations {
+  background-color: #424242;
+}
+
+.highlighted {
+  color: #303F9F;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.highlighted:hover {
+  color: #7986CB;
+}
+
+.displayLocations {
+  display: none;
+}
+
+.searchBtn {
+  display: inherit;
+  font-size: 15px;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.searchBtn:focus {
+  outline-color: #616161;
+}
