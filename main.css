@@ -68,3 +68,13 @@ ul {
 .searchBtn:focus {
   outline-color: #616161;
 }
+
+@media (max-width: 750px) {
+  .sideMenu {
+    display: none;
+  }
+
+  .displayLocations {
+    display: block;
+  }
+}
