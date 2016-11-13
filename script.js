@@ -44,7 +44,7 @@ let locations = [{
 function CenterControl(controlDiv, map) {
 
     // Set CSS for the control border.
-    var controlUI = document.createElement('div');
+    let controlUI = document.createElement('div');
     controlUI.classList.add("displayLocations")
     controlUI.style.backgroundColor = '#fff';
     controlUI.style.border = '2px solid #fff';
@@ -57,7 +57,7 @@ function CenterControl(controlDiv, map) {
     controlDiv.appendChild(controlUI);
 
     // Set CSS for the control interior.
-    var controlText = document.createElement('div');
+    let controlText = document.createElement('div');
     controlText.style.color = 'rgb(25,25,25)';
     controlText.style.fontFamily = 'Arial, sans-serif';
     controlText.style.fontSize = '16px';
@@ -67,7 +67,7 @@ function CenterControl(controlDiv, map) {
     controlText.innerHTML = 'Toggle Side Menu';
     controlUI.appendChild(controlText);
 
-    // Setup the click event listeners: simply set the map to Chicago.
+    // Add click event for display side menu
     controlUI.addEventListener('click', function(e) {
         let sideMenu = document.querySelector(".sideMenu");
         if (sideMenu.style.display == "block") {
@@ -93,8 +93,8 @@ function initMap() {
         },
         zoom: 13
     });
-    var centerControlDiv = document.createElement('div');
-    var centerControl = new CenterControl(centerControlDiv, map);
+    let centerControlDiv = document.createElement('div');
+    let centerControl = new CenterControl(centerControlDiv, map);
 
     centerControlDiv.index = 1;
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
@@ -164,7 +164,7 @@ let ViewModel = function() {
     self.filterMarkers = function() {
 
         // Set all markers and places to not visible.
-        var searchInput = self.userInput().toLowerCase();
+        let searchInput = self.userInput().toLowerCase();
         self.markerFilter.removeAll();
         self.setLocations().forEach(function(place) {
             place.marker.setVisible(false);
