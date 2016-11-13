@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Map</title>
+    <style media="screen">
+      html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .app {
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      .sideMenu {
+        order: 1;
+        flex-grow: 1;
+        background-color: #212121;
+      }
+      .listLocations {
+        background-color: #424242;
+      }
+      #map {
+        order: 2;
+        flex-grow: 12;
+        height: 100%;
+      }
+      ul {
+        list-style: none;
+        color: white;
+        font-size: 18px;
+        line-height: 2;
+      }
+      .highlighted {
+        color: #303F9F;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .highlighted:hover {
+        color: #7986CB;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+
+      <div class="sideMenu">
+        <div class="listLocations" data-bind="foreach: setLocations">
+          <ul>
+            <li data-bind="text: title, click: $parent.setMarker"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuX_1NzEeANUcJx2G0kHUMY2pYPe1BYHA&libraries=geometry&v=3&callback=initMap">
+    </script>
+    <script src="lib/knockout.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
