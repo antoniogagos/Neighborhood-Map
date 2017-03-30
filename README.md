@@ -5,5 +5,5 @@ Neighborhood map project is developed for the Front-End Nanodegree course for Ud
   *  Map markers identifying a number of favorite locations within New York.
   *  List view of the identified locations.
 
-## How to run it
+## How to run it
 Download the repository and run index.html in a local server
